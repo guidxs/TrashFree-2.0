@@ -5,6 +5,7 @@ import Sobre from './componentes/Sobre';
 import Aplicativo from './componentes/Aplicativo';
 import Nav from './componentes/Nav';
 import Projeto from './componentes/Projeto';
+import Login from './componentes/Login';
 
 function App() {
   return (
@@ -13,9 +14,10 @@ function App() {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/sobre" element={<Sobre />} />
           <Route path="/aplicativo" element={<Aplicativo />} />
           <Route path="/projeto" element={<Projeto />} />
+          <Route path="/sobre" element={<Sobre />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </>
