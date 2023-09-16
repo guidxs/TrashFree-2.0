@@ -1,8 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { } from 'react-router-dom';
 import './Projeto.css';
 
 function Projeto() {
+  const [donationAmount, setDonationAmount] = useState(0);
+  const [showThankYouMessage, setShowThankYouMessage] = useState(false);
+
+  // Função para aumentar o valor
+  const increaseAmount = () => {
+    setDonationAmount(donationAmount + 1);
+  };
+
+  // Função para diminuir o valor
+  const decreaseAmount = () => {
+    if (donationAmount > 0) {
+      setDonationAmount(donationAmount - 1);
+    }
+  };
+
+  // Função para lidar com a mudança no input
+  const handleInputChange = (event) => {
+    const newValue = parseInt(event.target.value, 10);
+    if (!isNaN(newValue)) {
+      setDonationAmount(newValue);
+    }
+  };
+
+  const handleDonationClick = () => {
+    setShowThankYouMessage(true);
+  };
+
   return (
     <div>
       <div className="projeto">
@@ -19,6 +46,11 @@ function Projeto() {
       <div className="panel">
         <h3>APOIE #TrashFree!</h3>
         <div>
+        <button className="button" onClick={increaseAmount}>Aumentar</button>
+        <button className="button" onClick={decreaseAmount}>Diminuir</button>
+      </div>
+
+        <div>
           <button className="button">5 Reais</button>
           <button className="button">10 Reais</button>
         </div>
@@ -27,11 +59,21 @@ function Projeto() {
           <button className="button">50 Reais</button>
         </div>
         <div>
-          <input type="number" placeholder="Outro valor :)" />
+        <input
+          type="number"
+          placeholder="Outro valor :)"
+          value={donationAmount}
+          onChange={handleInputChange}
+        />
         </div>
         <div>
-          <button className="button-enviar">DOAR!</button>
+          <button className="button-enviar" onClick={handleDonationClick}>DOAR!</button>
         </div>
+        {showThankYouMessage && (
+        <div>
+          <p>Obrigado por doar!</p>
+        </div>
+        )}
       </div>
       <div className="txtlateral">
         <h3>Faça parte da revolução da coleta de lixo com a TrashFree!</h3>
