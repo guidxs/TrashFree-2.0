@@ -1,0 +1,15 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.sobre{
+    margin-top: 140px;
+    margin-left: 130px;
+}
+.fotos{
+    margin-left: 85px;
+    padding-inline: 20px;
+}
