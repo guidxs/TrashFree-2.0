@@ -4,7 +4,9 @@ Este repositório contém o código-fonte do site desenvolvido para o projeto Tr
 
 ## Integrantes
 
-Guilherme Doretto Sobreiro RM99674 1ESPI
+-Guilherme Doretto Sobreiro RM99674
+-Aksel
+-Samyr
 
 ## Situação
 
