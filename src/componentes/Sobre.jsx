@@ -31,6 +31,8 @@ function Sobre() {
 
       <h2>Integrantes</h2>
       <p>Guilherme Doretto Sobreiro RM:99674</p>
+      <p>Aksel RM:*****</p>
+      <p>Samyr RM:*****</p>
 
       <img className="fotos" src="/assets/image16.png" alt="plantinha" />
       <img className="fotos" src="/assets/image15.png" alt="reciclavel" />
